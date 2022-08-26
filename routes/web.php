@@ -7,6 +7,7 @@ use App\Http\Controllers\IconController;
 use App\Http\Controllers\Auth\AuthenticationController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\PageController;
 use Illuminate\Database\Eloquent\Model;
 
 /*
@@ -34,7 +35,7 @@ Route::get('logout',[AuthenticationController::class,'logout'])->name('logout');
 
 
 // AdminController
-Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard')->name('loginmiddleware');
+Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
 
 
 // IconController
@@ -75,3 +76,13 @@ Route::get("menu/delete/{id}", [MenuController::class, 'deletemenu']);
 Route::get("menu/edit/{id}", [MenuController::class, 'viewmenu']);
 
 Route::post("updated", [MenuController::class, 'updatemenu']);
+
+
+Route::get('list/pages',[PageController::class,'list_pages'])->name('list/pages');
+Route::get('add/pages',[PageController::class,'add_pages'])->name('add/pages');
+Route::Post('add/pages/post',[PageController::class,'add_pagesPost'])->name('add/pages/post');
+Route::get('edit/pages/{id}',[PageController::class,'edit_pages'])->name('edit/pages');
+Route::post('edit/pages/post/{id}',[PageController::class,'edit_pagesPost'])->name('editPage');
+Route::get('delete/page/{id}',[PageController::class,'delete_page'])->name('deletePage');
+Route::post('changestatus',[PageController::class,'changePagestatus'])->name('changestatus');
+Route::post('search/pages',[PageController::class,'pagesearch'])->name('search/pages');
