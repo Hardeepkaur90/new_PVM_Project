@@ -26,13 +26,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+    
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    
+    
     <link rel="stylesheet" href="{{ asset('pvm_assets/css/adminlte.min.css') }}">
+    <link rel="stylesheet" href="{{asset('style.css')}}">
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper bg-light">
+    <div class="wrapper ">
         @include('layout.header')
         @include('layout.sidenav')
 
@@ -45,9 +50,12 @@
             @yield('globalsettings')
             @yield('editglobalsettings')
             @yield('changepassword')
+            @yield('listpages')
+            @yield('addpages')
+            @yield('editpages')
         </div>
 
-        @include('layout.footer')
+        <!-- @include('layout.footer') -->
 
     </div>
     <!-- <script src="{{ asset('pvm_assets/plugins/jquery/jquery.min.js') }}"></script> -->
@@ -57,10 +65,14 @@
     <script>
         $.widget.bridge('uibutton', $.ui.button)
     </script>
+
+   
     <!-- Bootstrap 4 -->
     <script src="{{ asset('pvm_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- ChartJS -->
     <script src="{{ asset('pvm_assets/plugins/chart.js/Chart.min.js') }}"></script>
+    <!-- ck Editor -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
     <!-- Sparkline -->
     <script src="{{ asset('pvm_assets/plugins/sparklines/sparkline.js') }}"></script>
     <!-- JQVMap -->
@@ -77,11 +89,15 @@
     <script src="{{ asset('pvm_assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- overlayScrollbars -->
     <script src="{{ asset('pvm_assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+
     <!-- AdminLTE App -->
+
     <script src="{{ asset('pvm_assets/js/adminlte.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="{{ asset('pvm_assets/js/demo.js') }}"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
     <script src="{{ asset('pvm_assets/js/pages/dashboard.js') }}"></script>
 </body>
 
