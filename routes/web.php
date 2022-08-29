@@ -6,6 +6,7 @@ use App\Http\Controllers\ModuleController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\Auth\AuthenticationController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Database\Eloquent\Model;
 
@@ -34,7 +35,9 @@ Route::get('logout',[AuthenticationController::class,'logout'])->name('logout');
 
 
 // AdminController
-Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard')->name('loginmiddleware');
+Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+
+
 
 
 // IconController
@@ -75,3 +78,29 @@ Route::get("menu/delete/{id}", [MenuController::class, 'deletemenu']);
 Route::get("menu/edit/{id}", [MenuController::class, 'viewmenu']);
 
 Route::post("updated", [MenuController::class, 'updatemenu']);
+
+
+
+
+// Routes for Post management
+
+
+
+
+Route::get('add-post', [PostController::class, 'addpost_form'])->name('add-post');
+
+Route::post('save-post', [PostController::class, 'save_post'])->name('save-post');
+
+
+Route::get('all-posts', [PostController::class, 'getallposts'])->name('getallposts');
+
+Route::get('delete-post/{id}', [PostController::class, 'deletepost']);
+Route::get('edit-post/{id}', [PostController::class, 'editpost']);
+Route::get('view-post/{id}', [PostController::class, 'viewpost']);
+
+Route::post('update-post/{id}', [PostController::class, 'updatepost']);
+
+Route::post('changestatus', [PostController::class, 'changestatus']);
+
+
+

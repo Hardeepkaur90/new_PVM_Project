@@ -47,8 +47,8 @@ use App\Models\Setting;
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{route('dashboard')}}" class="nav-link">
-                        <i class="nav-icon fas fa-home"></i>
+                    <a href="{{url('dashboard')}}" class="nav-link">
+                       <i class="nav-icon fas fa-home"></i>
                         <p>
                             Dashboard
                         </p>
@@ -122,6 +122,17 @@ use App\Models\Setting;
                             </a>
                         </li>
                     </ul>
+                 </li>
+                 <li class="nav-item">
+                    <a href="{{ url('all-posts') }}" class="nav-link text-white">
+                    <i class="bi bi-file-earmark-post-fill"style="margin-right:10px;"></i>
+                    
+                        <p>
+                           Post Management
+                        </p>
+                    </a>
+                   
+                 </li>
                 <div class="mt-2">
                     <h6 class="text-white"> Settings </h6>
                 </div>

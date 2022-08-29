@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Hash;
 class AdminController extends Controller
 {
     //
-    public function dashboard(){
+    public function dashboard(Request $req){ 
         return view('Admin.dashboard');
+        // return view('Admin.Menu.menus')
+        // return "123";
     }
 
 
