@@ -105,7 +105,7 @@
       </div>
       <div class="modal-body">
      <img src="" id="mod" class="img-fluid" alt="test">
-</div>
+    </div>
     </div>
   </div>
 </div>
