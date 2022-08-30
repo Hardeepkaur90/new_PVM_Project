@@ -16,8 +16,10 @@ use App\Models\Setting;
         $logo = Setting::first();
         @endphp
         <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
-        <div><h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5></div>
-        
+        <div>
+            <h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5>
+        </div>
+
     </a>
 
     <!-- Sidebar -->
@@ -45,6 +47,7 @@ use App\Models\Setting;
             </div>
         </div>
         <!-- Sidebar Menu -->
+
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
@@ -86,24 +89,20 @@ use App\Models\Setting;
                         </li>
                     </ul>
                 </li>
+
+
                 <div class="mt-2">
-                    <h6 class="text-white"> Menu's</h6>
+                    <h6 class="text-white"> Management </h6>
                 </div>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">
-                        <i class="bi bi-menu-button-wide" style="margin-right:10px;"></i>
+                    <a href="{{route('list-admins')}}" class="nav-link text-white">
+                        <i class="bi bi-person-circle" style="margin-right:10px;"></i>
                         <p>
-                            Menu Management
+                            Staff Management
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item ml-3">
-                            <a href="<?= url('menu'); ?>" class="nav-link">
-                            <i class="bi bi-menu-button-wide mr-1"></i>
-                                <p>Menu</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{route('list/pages')}}" class="nav-link text-white">
                         <i class="bi bi-clipboard-data" style="margin-right:10px;"></i>
@@ -111,6 +110,15 @@ use App\Models\Setting;
                             Page Management
                         </p>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('list-roles')}}" class="nav-link text-white">
+                        <i class="bi bi-person-bounding-box" style="margin-right:10px;"></i>
+                        <p>
+                            Create Role
+                        </p>
+                    </a>
+                </li>
                 <div class="mt-2">
                     <h6 class="text-white"> Settings </h6>
                 </div>
