@@ -9,6 +9,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Database\Eloquent\Model;
 
 /*
@@ -110,4 +111,20 @@ Route::post('edit/pages/post/{id}',[PageController::class,'edit_pagesPost'])->na
 Route::get('delete/page/{id}',[PageController::class,'delete_page'])->name('deletePage');
 Route::post('changestatus',[PageController::class,'changePagestatus'])->name('changestatus');
 Route::post('search/pages',[PageController::class,'pagesearch'])->name('search/pages');
+
+
+
+// RoleController'
+  
+Route::get('list-roles',[RoleController::class,'list_roles'])->name('list-roles');
+Route::get('create-roles',[RoleController::class,'add_roles'])->name('create-roles');
+Route::post('create-roles-post',[RoleController::class,'add_roles_post'])->name('create-roles-post');
+// Admin Controller 
+Route::get('list-admins',[AdminController::class,'list_users'])->name('list-admins');
+Route::get('add-admins',[AdminController::class,'add_admins'])->name('add-admins');
+Route::post('add-admin-post',[AdminController::class,'add_admin_post'])->name('add-admin-post');
+Route::get('edit-admins/{id}',[AdminController::class,'edit_admins'])->name('edit-admins');
+Route::post('edit-staff-post/{id}',[AdminController::class,'edit_staff_post'])->name('edit-staff-post');
+Route::get('add-admins-post',[AdminController::class,'edit_admins_post'])->name('add-admins-post');
+Route::get('view-staff/{id}',[AdminController::class,'viewStaff'])->name('view-staff');
 

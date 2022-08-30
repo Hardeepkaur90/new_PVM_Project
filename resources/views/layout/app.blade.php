@@ -73,6 +73,12 @@
             @yield('listpages')
             @yield('addpages')
             @yield('editpages')
+            @yield('listroles')
+            @yield('createroles')
+            @yield('listadmins')
+            @yield('addadmins')
+            @yield('editadmin')
+            @yield('viewstaff')
         </div>
 
         <!-- @include('layout.footer') -->
