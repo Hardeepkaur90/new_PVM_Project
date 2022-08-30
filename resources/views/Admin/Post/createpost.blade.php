@@ -48,7 +48,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="form-group row">
+                            <div id="imgsection" class="form-group row" style="display:none">
                                 <label for="inputSkills" class="col-sm-2 col-form-label">Your Selected Image:</label>
                                 <div class="col-sm-10">
                                 <img  id="blah" src="" height="50"width="50" >
@@ -77,6 +77,7 @@ function changeimage(input){
         .width(150)
         .height(200);
     };
+    $('#imgsection').css("display", "block")
     reader.readAsDataURL(input.files[0]);
   }
 }
