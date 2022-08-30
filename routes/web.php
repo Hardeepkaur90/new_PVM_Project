@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\AuthenticationController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\PageController;
 use Illuminate\Database\Eloquent\Model;
 
 /*
@@ -36,6 +37,8 @@ Route::get('logout',[AuthenticationController::class,'logout'])->name('logout');
 
 // AdminController
 Route::get('dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+
+
 
 
 
@@ -82,25 +85,29 @@ Route::post("updated", [MenuController::class, 'updatemenu']);
 
 
 
+
 // Routes for Post management
 
 
 
 
 Route::get('add-post', [PostController::class, 'addpost_form'])->name('add-post');
-
 Route::post('save-post', [PostController::class, 'save_post'])->name('save-post');
-
-
 Route::get('all-posts', [PostController::class, 'getallposts'])->name('getallposts');
-
 Route::get('delete-post/{id}', [PostController::class, 'deletepost']);
 Route::get('edit-post/{id}', [PostController::class, 'editpost']);
 Route::get('view-post/{id}', [PostController::class, 'viewpost']);
-
 Route::post('update-post/{id}', [PostController::class, 'updatepost']);
-
 Route::post('changestatus', [PostController::class, 'changestatus']);
 
 
+
+Route::get('list/pages',[PageController::class,'list_pages'])->name('list/pages');
+Route::get('add/pages',[PageController::class,'add_pages'])->name('add/pages');
+Route::Post('add/pages/post',[PageController::class,'add_pagesPost'])->name('add/pages/post');
+Route::get('edit/pages/{id}',[PageController::class,'edit_pages'])->name('edit/pages');
+Route::post('edit/pages/post/{id}',[PageController::class,'edit_pagesPost'])->name('editPage');
+Route::get('delete/page/{id}',[PageController::class,'delete_page'])->name('deletePage');
+Route::post('changestatus',[PageController::class,'changePagestatus'])->name('changestatus');
+Route::post('search/pages',[PageController::class,'pagesearch'])->name('search/pages');
 

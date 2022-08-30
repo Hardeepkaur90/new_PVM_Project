@@ -16,7 +16,8 @@ use App\Models\Setting;
         $logo = Setting::first();
         @endphp
         <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
-        <span class="brand-text font-weight-light">{{$logo->site_name}}</span>
+        <div><h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5></div>
+        
     </a>
 
     <!-- Sidebar -->
@@ -103,17 +104,14 @@ use App\Models\Setting;
                             </a>
                         </li>
                     </ul>
-
-                    <div class="mt-2">
-                    <h6 class="text-white">Page</h6>
-                </div>
                 <li class="nav-item">
-                    <a href="" class="nav-link text-white">
+                    <a href="{{route('list/pages')}}" class="nav-link text-white">
                         <i class="bi bi-clipboard-data" style="margin-right:10px;"></i>
                         <p>
                             Page Management
                         </p>
                     </a>
+
                     <ul class="nav nav-treeview">
                         <li class="nav-item ml-3">
                             <a href="" class="nav-link">
@@ -133,6 +131,7 @@ use App\Models\Setting;
                     </a>
                    
                  </li>
+
                 <div class="mt-2">
                     <h6 class="text-white"> Settings </h6>
                 </div>
