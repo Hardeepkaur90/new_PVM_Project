@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Menu;
 use App\Models\Icon;
+use SweetAlert\Facades\Alert;
 
 class MenuController extends Controller
 {

@@ -10,7 +10,7 @@ $logo = Setting::join('colors', 'colors.id', '=', 'navbar_color')->first([
             'settings.id as id','colors.id as color_id','navbar_color','logo_image','site_name','contact_email','contact_phone','color_name','color_code',
         ]);
 @endphp -->
-<nav class="main-header navbar navbar-expand navbar-secondary text-white">
+<nav class="main-header navbar navbar-expand navbar-danger text-white">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
