@@ -36,13 +36,16 @@
                             <td>{{$p_data->title}}</td>
                             <td><img src="{{asset('Page_images').'/'.$p_data->image}}" alt="" style="height:40px;"></td>
                             <td>
-                                <input data-id="{{$p_data->id}}" data-status="{{$p_data->status}}" class="toggle-class" id="toggal" type="checkbox" data-toggle="toggle"  
-                                {{ $p_data->status ? 'checked' : '' }}>
+                                <input data-id="{{$p_data->id}}" data-status="{{$p_data->status}}" class="toggle-class"
+                                    id="toggal" type="checkbox" data-toggle="toggle"
+                                    {{ $p_data->status ? 'checked' : '' }}>
                             </td>
 
                             <td class="width:15%;">
-                                <a href="{{url('edit/pages',['id'=>$p_data->id])}}" class="btn btn-warning btn-sm"><i class="bi bi-pencil-square"></i></a>
-                                <a href="javascript:void(0)" class="btn btn-danger btn-sm" onclick="deletePage({{$p_data->id}})"><i class="bi bi-trash"></i></a>
+                                <a href="{{url('edit/pages',['id'=>$p_data->id])}}" class="btn btn-warning btn-sm"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="javascript:void(0)" class="btn btn-danger btn-sm"
+                                    onclick="deletePage({{$p_data->id}})"><i class="bi bi-trash"></i></a>
                             </td>
                         </tr>
                         @endforeach
@@ -62,51 +65,51 @@
 </div>
 <!-- Button trigger modal -->
 <script>
-    $.ajaxSetup({
-        headers: {
-            'csrftoken': '{{ csrf_token() }}'
-        }
-    });
-    $(function() {
-        $('.toggle-class').change(function() {
-            var status = $(this).prop('checked') == true ? 1 : 0;
-            var p_id = $(this).data('id');
-            var p_status = $(this).data('status')
+$.ajaxSetup({
+    headers: {
+        'csrftoken': '{{ csrf_token() }}'
+    }
+});
+$(function() {
+    $('.toggle-class').change(function() {
+        var status = $(this).prop('checked') == true ? 1 : 0;
+        var p_id = $(this).data('id');
+        var p_status = $(this).data('status')
 
-            $.ajax({
-                type: "POST",
-                url: "{{url('changestatus')}}",
-                data: {
-                    'status': p_status,
-                    'p_id': p_id,
-                    '_token': '{{csrf_token()}}'
-                },
-                success: function(data) {
-                    console.log(data.success)
-                }
-            });
-        })
+        $.ajax({
+            type: "POST",
+            url: "{{url('changestatus')}}",
+            data: {
+                'status': p_status,
+                'p_id': p_id,
+                '_token': '{{csrf_token()}}'
+            },
+            success: function(data) {
+                console.log(data.success)
+            }
+        });
     })
+})
 
-    function deletePage(id) {
-       swal({
-               title: "Are you sure?",
-               text: "Once deleted, you will not be able to recover this page!",
-               icon: "warning",
-               buttons: true,
-               dangerMode: true,
-           })
-           .then((willDelete) => {
-               if (willDelete) {
-                   window.location.href = "{{url('delete/page')}}/" + id;
-               } else {
-                   swal("Your page is safe!");
-               }
-           });
-   }
+function deletePage(id) {
+    swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this page!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                window.location.href = "{{url('delete/page')}}/" + id;
+            } else {
+                swal("Your page is safe!");
+            }
+        });
+}
 
-    $(document).ready(function() {
-        $('#page_table').DataTable();
-    });
+$(document).ready(function() {
+    $('#page_table').DataTable();
+});
 </script>
 @endsection
