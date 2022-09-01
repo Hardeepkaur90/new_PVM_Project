@@ -68,7 +68,6 @@ Route::post('edit/post_settings/{id}',[SettingController::class,'update']);
 // --------------------------------menu crud--------------------------------------------
 
 Route::post("created", [MenuController::class, 'addmenu']);
-
 Route::get("menu", [MenuController::class, 'showmenu']);
 
 Route::get("menu/delete/{id}", [MenuController::class, 'deletemenu']);

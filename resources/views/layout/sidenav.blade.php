@@ -15,8 +15,8 @@ use App\Models\Setting;
         @php
         $logo = Setting::first();
         @endphp
-        <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
-        <div><h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5></div>
+        <img src="" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
+        <div><h5 class="brand-text font-weight-bold"></h5></div>
         
     </a>
 

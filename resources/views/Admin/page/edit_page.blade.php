@@ -19,6 +19,9 @@
                     {{ session()->get('success') }}
                 </div>
                 @endif
+            
+            
+            
                 <form class="form-horizontal" method="post" action="{{url('edit/pages/post/'.$pageedit->id)}}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
@@ -59,6 +62,7 @@
                         </div>
                     </div>
                 </form>
+            
             </div>
         </div>
     </div>

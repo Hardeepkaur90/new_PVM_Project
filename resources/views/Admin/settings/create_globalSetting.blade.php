@@ -68,12 +68,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <div class="offset-sm-2 col-sm-10">
-                                    <div class="checkbox">
-                                        <label>
-                                            <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
-                                        </label>
-                                    </div>
+                                <label for="inputSkills" class="col-sm-2 col-form-label">Copy Right Text</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="inputSkills" placeholder="Contact Phone" name="copyrighttext">
+                                    @error('copyrighttext')
+                                    <p class="text-danger"> {{$message}}</p>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="form-group row">

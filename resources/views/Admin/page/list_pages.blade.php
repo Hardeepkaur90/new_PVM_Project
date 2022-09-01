@@ -11,6 +11,9 @@
             <a href="{{route('add/pages')}}" class="btn btn-info"> Add Pages </a>
         </div>
     </div>
+    
+    
+    
     <div class="row mt-2">
         <div class="col-md-11 mx-auto rounded shadow-lg p-3 rounded">
             <div class="d-flex  justify-content-between">
@@ -19,7 +22,9 @@
                 </span>
             </div>
             <div class="container mt-2">
-                <table class="table table-hover" id="page_table">
+                
+            
+            <table class="table table-hover" id="page_table">
                     <thead>
                         <tr class="bg-white">
                             <th scope="col">S.No</th>
@@ -48,6 +53,9 @@
                         @endforeach
                     </tbody>
                 </table>
+            
+            
+            
             </div>
         </div>
     </div>
