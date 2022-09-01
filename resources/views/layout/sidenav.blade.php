@@ -89,8 +89,6 @@ use App\Models\Setting;
                         </li>
                     </ul>
                 </li>
-
-
                 <div class="mt-2">
                     <h6 class="text-white"> Management </h6>
                 </div>

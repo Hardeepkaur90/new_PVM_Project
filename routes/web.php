@@ -99,7 +99,7 @@ Route::get('delete-post/{id}', [PostController::class, 'deletepost']);
 Route::get('edit-post/{id}', [PostController::class, 'editpost']);
 Route::get('view-post/{id}', [PostController::class, 'viewpost']);
 Route::post('update-post/{id}', [PostController::class, 'updatepost']);
-Route::post('changestatus', [PostController::class, 'changestatus']);
+Route::post('changestatus', [PostController::class, 'changestatus'])->name('changestatus');
 
 
 
