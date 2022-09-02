@@ -80,7 +80,14 @@
 </div>
 
 
-
+<ul id="sortable">
+            @foreach($datalist as $value)
+            <!-- style="background-image: URL('{{asset('images/slider/'.$value->image)}}')"  -->
+            <li class="ui-state-default li_image" value="{{$value->id}}" name="sliderid" data-id="{{$value->id}}" id="sort_li">
+                {{$value->image_title}}
+            </li>
+            @endforeach
+        </ul>
 </div>
 </div>
 
@@ -134,6 +141,42 @@
                 }
             });
     }
+    $("#sortable").sortable({
+        axis: 'y',
+        update: function(event, ui) {
+            var id = $('#sort_li').data('id');
+            var dataIds = [];
+            $('[name="sliderid"]').each(function() {
+                dataIds.push($(this).val());
+
+            });
+            alert(dataIds);
+
+            $.ajax({
+                url: '{{ "order" }}',
+                type: 'POST',
+                data: {
+                    id: id,
+                    data1: dataIds,
+                    '_token': '{{csrf_token()}}'
+                },
+                success: function(result) {
+                    console.log(result);
+
+                },
+                complete: function() {
+
+                }
+            });
+        }
+
+    });
 </script>
 
 @endsection
+
+
+
+
+
+    
