@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class sliderController extends Controller
 {
+    
+    
     public function addimage(Request $req)
     {
         $req->validate([

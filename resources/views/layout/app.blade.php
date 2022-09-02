@@ -57,7 +57,7 @@
             @yield('editpages')
 
 
-            @yield('add_slider')
+            @yield('addslider')
             @yield('edit_slider')
             @yield('slider_list')
         </div>

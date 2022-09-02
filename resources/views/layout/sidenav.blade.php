@@ -110,29 +110,18 @@ use App\Models\Setting;
                     <div class="mt-2">
                         <h6 class="text-white"> Slider 's</h6>
                     </div>
-                <li class="nav-item">
-                    <a href="<?= url('slider-list'); ?>" class="nav-link text-white">
-                        <i class="bi bi-menu-button-wide" style="margin-right:10px;"></i>
+                    <li class="nav-item">
+                    <a href="{{url('slider-list')}}" class="nav-link text-white">
+                    <i class="bi bi-menu-button-wide" style="margin-right:10px;"></i>
                         <p>
-                            Slider Mangement
+                            Slider Management
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item ml-3">
-                            <a href="<?= url('add-slider'); ?>" class="nav-link">
-                                <i class="bi bi-menu-button-wide mr-1"></i>
-                                <p>Add Slider image</p>
-                            </a>
-                        </li>
-
-                        <li class="nav-item ml-3">
-                            <a href="<?= url('slider-list'); ?>" class="nav-link">
-                                <i class="bi bi-menu-button-wide mr-1"></i>
-                                <p>Slider List</p>
-                            </a>
-                        </li>
-                    </ul>
-
+                    </li>
+               
+               
+               
+                    
 
                 <li class="nav-item">
                     <a href="{{route('list/pages')}}" class="nav-link text-white">
