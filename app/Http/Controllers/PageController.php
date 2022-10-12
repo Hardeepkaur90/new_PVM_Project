@@ -117,7 +117,9 @@ class PageController extends Controller
             Page::where('id', $id)->update([
                 'image' => $image_name,
             ]);
-        } else {
+        } 
+        else 
+        {
             $edit_page_data->image = $old_image;
         }
 

@@ -19,15 +19,16 @@
                     {{ session()->get('success') }}
                 </div>
                 @endif
-            
-            
-            
-                <form class="form-horizontal" method="post" action="{{url('edit/pages/post/'.$pageedit->id)}}" enctype="multipart/form-data">
+
+                <form class="form-horizontal" method="post" action="{{url('edit/pages/post/'.$pageedit->id)}}"
+                    enctype="multipart/form-data">
+
                     @csrf
                     <div class="form-group row">
                         <label for="inputExperience" class="col-sm-2 col-form-label">Page Title </label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName2" placeholder="Page Title" name="pagetitle" value="{{$pageedit->title}}">
+                            <input type="text" class="form-control" id="inputName2" placeholder="Page Title"
+                                name="pagetitle" value="{{$pageedit->title}}">
 
                             @error('pagetitle')
                             <p class="text-danger"> {{$message}}</p>
@@ -38,7 +39,8 @@
                         <label for="inputSkills" class="col-sm-2 col-form-label">Image</label>
                         <div class="col-sm-10">
                             <input type="file" class="form-control" id="inputSkills" placeholder="Slug" name="image">
-                            <img src="{{asset('Page_images').'/'.$pageedit->image}}" alt="" class="mt-2 ml-2" style="width:180px; height:200px;">
+                            <img src="{{asset('Page_images').'/'.$pageedit->image}}" alt="" class="mt-2 ml-2"
+                                style="width:180px; height:200px;">
 
                             @error('image')
                             <p class="text-danger"> {{$message}}</p>
@@ -69,18 +71,18 @@
 </div>
 
 <script>
-    $(function() {
-                // Summernote
-                var t = $('#summernote').summernote({
-                        height: 250,
-                        focus: true
-                    });
+$(function() {
+    // Summernote
+    var t = $('#summernote').summernote({
+        height: 250,
+        focus: true
+    });
 
-                    // CodeMirror
-                    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
-                        mode: "htmlmixed",
-                        theme: "monokai"
-                    });
-                })
+    // CodeMirror
+    CodeMirror.fromTextArea(document.getElementById("codeMirrorDemo"), {
+        mode: "htmlmixed",
+        theme: "monokai"
+    });
+})
 </script>
 @endsection
