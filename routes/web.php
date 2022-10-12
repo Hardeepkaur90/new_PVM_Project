@@ -84,7 +84,6 @@ Route::get("menu-demo", [MenuController::class, 'menudisplay']);
 Route::post("updateMenu", [MenuController::class, 'updatedMenu']);
 
 Route::post("created", [MenuController::class, 'addmenu']);
-
 Route::get("menu", [MenuController::class, 'showmenu']);
 
 Route::get("menu/delete/{id}", [MenuController::class, 'deletemenu']);

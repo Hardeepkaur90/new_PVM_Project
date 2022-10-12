@@ -15,11 +15,12 @@ class CreateSettingsTable extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
-            $table->integer('navbar_color');
+            $table->integer('theme_color');
             $table->string('logo_image');
             $table->string('site_name');
             $table->string('contact_email');
             $table->string('contact_phone');
+            $table->string('copyright');
             $table->timestamps();
         });
     }
