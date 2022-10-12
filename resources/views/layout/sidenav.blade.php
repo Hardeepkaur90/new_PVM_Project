@@ -18,6 +18,7 @@ use App\Models\Setting;
         <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
         <div>
             <h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5>
+
         </div>
 
     </a>
@@ -113,8 +114,20 @@ use App\Models\Setting;
                     <ul class="nav nav-treeview">
                         <li class="nav-item ml-3">
                             <a href="" class="nav-link">
-                            <i class="bi bi-clipboard-data mr-1"></i>
+                              <i class="bi bi-clipboard-data mr-1"></i>
                                 <p>Pages</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a href="<?= url('menu'); ?>" class="nav-link">
+                                <i class="bi bi-menu-button-wide mr-1"></i>
+                                <p>Menu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a href="<?= url('menu-demo'); ?>" class="nav-link">
+                                <i class="bi bi-menu-button-wide mr-1"></i>
+                                <p>Manage</p>
                             </a>
                         </li>
                     </ul>
@@ -138,11 +151,13 @@ use App\Models\Setting;
                             Create Role
                         </p>
                     </a>
+
                 </li>
 
                 <div class="mt-2">
                     <h6 class="text-white"> Settings </h6>
                 </div>
+
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">
                         <i class="bi bi-gear" style="margin-right:10px;"></i>

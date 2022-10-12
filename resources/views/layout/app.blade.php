@@ -43,11 +43,12 @@
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
-    
-    
+
+
     <link rel="stylesheet" href="{{ asset('pvm_assets/css/adminlte.min.css') }}">
     <link rel="stylesheet" href="{{asset('style.css')}}">
     <link rel="stylesheet" href="{{ asset('style/style.css') }}">
@@ -73,15 +74,18 @@
             @yield('listpages')
             @yield('addpages')
             @yield('editpages')
+
             @yield('listroles')
             @yield('createroles')
             @yield('listadmins')
             @yield('addadmins')
             @yield('editadmin')
             @yield('viewstaff')
+            @yield('menumanagement')
+
         </div>
 
-        <!-- @include('layout.footer') -->
+       
 
     </div>
     <!-- <script src="{{ asset('pvm_assets/plugins/jquery/jquery.min.js') }}"></script> -->
@@ -102,6 +106,7 @@
 
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
+
     <!-- Bootstrap 4 -->
     <script src="{{ asset('pvm_assets/plugins/bootstrap/js/bootstrap.bundle.min.js') }}">
     </script>
@@ -120,8 +125,9 @@
     <script src="{{ asset('pvm_assets/plugins/moment/moment.min.js') }}"></script>
     <script src="{{ asset('pvm_assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
-    <script
-        src="{{ asset('pvm_assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}">
+
+    <script src="{{ asset('pvm_assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}">
+
     </script>
     <!-- Summernote -->
     <script src="{{ asset('pvm_assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
@@ -139,7 +145,8 @@
 
 
     <!-- AdminLTE App -->
-
+    <!-- <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script> -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="{{ asset('pvm_assets/js/adminlte.js') }}"></script>
 
 
@@ -148,13 +155,14 @@
 
 
     <!-- AdminLTE for demo purposes -->
-    <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script> -->
     <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 
     <script src="{{ asset('pvm_assets/js/pages/dashboard.js') }}"></script>
-    <script src="{{ asset('pvm_assets/js/pages/dashboard.js') }}"></script>
+
 
 </body>
 
 </html>
+
