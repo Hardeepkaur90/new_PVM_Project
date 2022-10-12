@@ -15,9 +15,11 @@ use App\Models\Setting;
         @php
         $logo = Setting::first();
         @endphp
-        <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
-        <div><h5 class="brand-text font-weight-bold">{{$logo->site_name}}</h5></div>
-        
+        <img src="" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
+        <div>
+            <h5 class="brand-text font-weight-bold"></h5>
+        </div>
+
     </a>
 
     <!-- Sidebar -->
@@ -99,8 +101,14 @@ use App\Models\Setting;
                     <ul class="nav nav-treeview">
                         <li class="nav-item ml-3">
                             <a href="<?= url('menu'); ?>" class="nav-link">
-                            <i class="bi bi-menu-button-wide mr-1"></i>
+                                <i class="bi bi-menu-button-wide mr-1"></i>
                                 <p>Menu</p>
+                            </a>
+                        </li>
+                        <li class="nav-item ml-3">
+                            <a href="<?= url('menu-demo'); ?>" class="nav-link">
+                                <i class="bi bi-menu-button-wide mr-1"></i>
+                                <p>Manage</p>
                             </a>
                         </li>
                     </ul>
@@ -111,9 +119,9 @@ use App\Models\Setting;
                             Page Management
                         </p>
                     </a>
-                <div class="mt-2">
-                    <h6 class="text-white"> Settings </h6>
-                </div>
+                    <div class="mt-2">
+                        <h6 class="text-white"> Settings </h6>
+                    </div>
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">
                         <i class="bi bi-gear" style="margin-right:10px;"></i>
