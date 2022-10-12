@@ -12,8 +12,9 @@ use App\Models\Setting;
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="" class="brand-link">
-        @php
+        <!-- @php
         $logo = Setting::first();
+
         @endphp
         <img src="{{asset('logo_img/'.$logo->logo_image)}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity:.8;">
         <div>
@@ -131,6 +132,25 @@ use App\Models\Setting;
                             </a>
                         </li>
                     </ul>
+
+
+                    <div class="mt-2">
+                        <h6 class="text-white"> Slider 's</h6>
+                    </div>
+                    <li class="nav-item">
+                    <a href="{{url('slider-list')}}" class="nav-link text-white">
+                    <i class="bi bi-menu-button-wide" style="margin-right:10px;"></i>
+                        <p>
+                            Slider Management
+                        </p>
+                    </a>
+                    </li>
+               
+               
+               
+                    
+
+
                  </li>
                  <li class="nav-item">
                     <a href="{{ url('all-posts') }}" class="nav-link text-white">
@@ -144,6 +164,7 @@ use App\Models\Setting;
                  </li>
 
        </li>
+
                 <li class="nav-item">
                     <a href="{{route('list-roles')}}" class="nav-link text-white">
                         <i class="bi bi-person-bounding-box" style="margin-right:10px;"></i>
@@ -152,11 +173,14 @@ use App\Models\Setting;
                         </p>
                     </a>
 
+                   
+
                 </li>
 
                 <div class="mt-2">
                     <h6 class="text-white"> Settings </h6>
                 </div>
+
 
                 <li class="nav-item">
                     <a href="" class="nav-link text-white">

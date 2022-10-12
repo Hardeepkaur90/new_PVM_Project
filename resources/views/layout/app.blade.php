@@ -44,7 +44,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    
+
     <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
     <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
 
@@ -75,6 +75,11 @@
             @yield('addpages')
             @yield('editpages')
 
+
+            @yield('addslider')
+            @yield('edit_slider')
+            @yield('slider_list')
+
             @yield('listroles')
             @yield('createroles')
             @yield('listadmins')
@@ -100,11 +105,13 @@
     <script src="{{ asset('pvm_assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
-
+    $.widget.bridge('uibutton', $.ui.button)
     </script>
 
+
+
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
 
 
     <!-- Bootstrap 4 -->
@@ -126,9 +133,7 @@
     <script src="{{ asset('pvm_assets/plugins/daterangepicker/daterangepicker.js') }}"></script>
     <!-- Tempusdominus Bootstrap 4 -->
 
-    <script src="{{ asset('pvm_assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}">
-
-    </script>
+    <script src="{{ asset('pvm_assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
     <!-- Summernote -->
     <script src="{{ asset('pvm_assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- overlayScrollbars -->
@@ -161,6 +166,15 @@
 
     <script src="{{ asset('pvm_assets/js/pages/dashboard.js') }}"></script>
 
+    <script src="{{asset('pvm_assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+    <script src=".AdminLTE-3.0.5/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+
+    <script>
+    $(function() {
+        bsCustomFileInput.init();
+    });
+    </script>
 
 </body>
 
