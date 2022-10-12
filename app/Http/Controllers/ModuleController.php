@@ -22,7 +22,7 @@ class ModuleController extends Controller
     }
 
     public function add_modules(Request $request)
-    { {
+    { 
             $request->validate([
                 // 'moduletitle' => 'required',
                 'selecticon' => 'required',
@@ -53,6 +53,6 @@ class ModuleController extends Controller
                 'module_slug' => $request->moduleslug,
             ]);
             return back()->with('success', 'Module Created Successfully');
-        }
+        
     }
 }
