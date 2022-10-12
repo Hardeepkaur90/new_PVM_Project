@@ -21,6 +21,7 @@ class loginMiddleware
         $auth = User::where('admin_role',$authuser)->get();
 
         if(empty($authuser)){
+
             return back('admin')->with('danger','Login First ');
            }
            else{
